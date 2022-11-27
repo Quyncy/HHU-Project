@@ -1,0 +1,31 @@
+<div class="container">
+  <form method="POST" class="form" id="form">
+    <h1>Login</h1>
+    {% csrf_token %}
+    {% if messages %}
+
+    {% for message in massages %}
+    <div class='alert'>
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email"  class="form-control">
+
+        </div>
+
+        <div class="form-group">
+            <label for="password">Passwort</label>
+            <input type="password" name="password" id="password"  class="form-control">
+
+        </div>
+
+
+        <a href="{% url 'set-password'%}">Passwort vergessen</a>
+        <a href="{% url 'register'%}">Register</a>
+
+        <button class="btn btn-danger mt-4" type="submit">Submit</button>
+  </form>
+</div>

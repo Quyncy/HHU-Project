@@ -1,0 +1,24 @@
+<html>
+
+
+<!-- Dozent Formular -->
+  <form method="post">
+    {% csrf_token %}
+    <label for="{{form.title.id_for_label}}">
+      {{form.titel.label}}</label>
+      {{form.titel}}
+      <br />
+    <label for="{{form.name.id_for_label}}">
+      {{form.name.label}}</label>
+      <br />
+      {{form.name}}
+      <br />
+      <label for="{{form.nachname.id_for_label}}"
+        >{{form.nachname.label}}</label
+      >
+      <br />
+      {{form.nachname}}
+      <br />
+  <input type="submit" value="Submit" />
+
+</html>
