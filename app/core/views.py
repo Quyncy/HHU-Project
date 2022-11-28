@@ -75,7 +75,8 @@ def changePassword(request, token):
             user.set_password(new_password)
             user.save()
 
-            return redirect('ok')
+            messages.success(request, 'Passwort erfolgreich zurückgesetzt.')
+            return redirect('login')
     except Exception as e:
         print(e)
 
